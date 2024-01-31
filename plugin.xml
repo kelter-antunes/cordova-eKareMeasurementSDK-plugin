@@ -41,7 +41,7 @@
     <framework src="Security.framework" />
 
     <!-- Copy framework files from src/ios/Frameworks to the correct location -->
-    <resource-file src="src/ios/Frameworks/eKareMeasurementSDK.framework" target="YourApp/Frameworks/eKareMeasurementSDK.framework" />
+    <resource-file src="src/ios/Frameworks/eKareMeasurementSDK.framework" target="Frameworks/eKareMeasurementSDK.framework" />
 
     <source-file src="src/ios/eKareinSightInterApp.m"/>
     <header-file src="src/ios/eKareinSightInterApp.h"/>
