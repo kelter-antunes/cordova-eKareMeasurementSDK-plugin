@@ -9,6 +9,12 @@
   <engines>
     <engine name="cordova-android" version=">=6.3.0" />
   </engines>
+
+
+  <!-- Include the after_plugin_add hook -->
+  <hook type="after_plugin_add" src="hooks/after_plugin_add.js" />
+
+
   <js-module src="www/eKareinSightInterApp.js" name="eKareinSightInterApp" >
     <merges target="eKareinSightInterApp"/>
   </js-module>
