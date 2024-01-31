@@ -11,16 +11,17 @@ module.exports = function (context) {
         var projectName = getProjectName(context);
 
         if (projectName) {
-            var srcDir = path.join(context.opts.projectRoot, 'src', platform, 'Frameworks');
+            // Adjust srcDir to point to the correct source folder within the plugin
+            var srcDir = path.join(context.opts.projectRoot, 'plugins', 'cordova-ekare-measurement-sdk-plugin', 'src', platform, 'Frameworks');
             var destDir = path.join(context.opts.projectRoot, 'platforms', platform, projectName, 'Frameworks');
 
             // Ensure the destination directory exists
             fs.ensureDirSync(destDir);
 
-            // Copy files from src/ios/frameworks to the destination directory
+            // Copy files from src/ios/Frameworks to the destination directory
             fs.copySync(srcDir, destDir);
 
-            console.log('Files copied successfully from src/' + platform + '/frameworks to platforms/' + platform + '/' + projectName + '/Frameworks');
+            console.log('Files copied successfully from ' + srcDir + ' to platforms/' + platform + '/' + projectName + '/Frameworks');
         } else {
             console.error('Unable to determine Cordova project name. Please check your project setup.');
         }
