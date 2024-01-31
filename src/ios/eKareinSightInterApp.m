@@ -37,7 +37,7 @@
         } @catch (NSException *exception) {
             NSLog(@"Exception caught: %@", exception.reason);
             NSString *errorMessage = [NSString stringWithFormat:@"Exception caught: %@", exception.reason];
-            CDVPluginResult *pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:errorMessage];
+            CDVPluginResult *pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:errorMessage];
             [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
         }
     }];
