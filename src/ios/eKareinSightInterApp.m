@@ -6,9 +6,12 @@
 
 @implementation eKareinSightInterApp
 
+@property (nonatomic, strong) eKareMeasurement          *eKareMeasurementObj;
 
 - (void)open:(CDVInvokedUrlCommand*)command {
 	[self.commandDelegate runInBackground:^{
+
+    self.eKareMeasurementObj = [eKareMeasurement new];
 
     NSString *result = nil;
 
@@ -17,6 +20,26 @@
     NSString *kInterAppMeasurementScheme = [command.arguments objectAtIndex:2];
     NSString *kInterAppCallbackScheme = [command.arguments objectAtIndex:3];
     NSString *kInterAppPasteBoardName = [command.arguments objectAtIndex:4];
+
+
+
+    NSDictionary *params =@{@"user_role" : @"admin",
+                            @"wound_id" : @(-1)};
+    [[self eKareMeasurementObj] startMeasurement:params
+                                  withCompletion:^(NSDictionary *info, NSError *error) {
+      if(error) {
+          NSLog(@"Error in measurement: %@", error.description);
+          result = @"Error in measurement: %@", error.description;
+
+      }else{
+          NSLog(@"Measurement completed: %@", info.description);
+          result = @"Measurement completed: %@", info.description;
+      }
+    }];
+
+
+
+
 
 
     CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:result];
