@@ -1,0 +1,29 @@
+{
+  "name": "cordova-ekare-measurement-sdk-plugin",
+  "version": "1.0.0",
+  "description": "cordova-ekare-measurement-sdk-plugin",
+  "cordova": {
+    "id": "cordova-ekare-measurement-sdk-plugin",
+    "platforms": [
+      "ios"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kelter-antunes/cordova-ekare-measurement-sdk-plugin.git"
+  },
+  "keywords": [
+    "cordova",
+    "eKare",
+    "inSight",
+    "inter-app",
+    "ecosystem:cordova",
+    "cordova-ios"
+  ],
+  "author": "Miguel 'Kelter' Antunes",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kelter-antunes/cordova-ekare-measurement-sdk-plugin/issues"
+  },
+  "homepage": "https://github.com/kelter-antunes/cordova-ekare-measurement-sdk-plugin#readme"
+}

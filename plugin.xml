@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android" id="cordova-ekare-measurement-sdk-plugin" version="1.1.0">
+  <name>cordova-ekare-measurement-sdk-plugin</name>
+  <description>cordova-ekare-measurement-sdk-plugin</description>
+  <license>MIT</license>
+  <keywords>cordova,eKare,inSight,inter-app</keywords>
+  <repo>https://github.com/kelter-antunes/cordova-ekare-measurement-sdk-plugin</repo>
+  <issue>https://github.com/kelter-antunes/cordova-ekare-measurement-sdk-plugin/issues</issue>
+  <engines>
+    <engine name="cordova-android" version=">=6.3.0" />
+  </engines>
+  <js-module src="www/eKareinSightInterApp.js" name="eKareinSightInterApp" >
+    <merges target="eKareinSightInterApp"/>
+  </js-module>
+
+  <!-- iOS -->
+  <platform name="ios">
+
+    <preference name="CUSTOM_URL_SCHEME" default="measure-demo" />
+
+    <config-file parent="/*" target="config.xml">
+      <feature name="eKareinSightInterApp">
+        <param name="ios-package" value="eKareinSightInterApp" onload="true" />
+      </feature>
+    </config-file>
+
+    <config-file target="*-Info.plist" parent="CFBundleURLTypes">
+      <array>
+        <dict>
+          <key>CFBundleTypeRole</key>
+            <string>None</string>
+          <key>CFBundleURLSchemes</key>
+          <array>
+            <string>$CUSTOM_URL_SCHEME</string>
+          </array>
+        </dict>
+      </array>
+    </config-file>
+
+    <framework src="Foundation.framework" />
+    <framework src="Security.framework" />
+    <source-file src="src/ios/eKareinSightInterApp.m"/>
+    <header-file src="src/ios/eKareinSightInterApp.h"/>
+    <header-file src="src/ios/RNCryptor/RNCryptor+Private.h" />
+    <header-file src="src/ios/RNCryptor/RNCryptor-Prefix.pch" />
+    <header-file src="src/ios/RNCryptor/RNCryptor.h" />
+    <source-file src="src/ios/RNCryptor/RNCryptor.m" />
+    <header-file src="src/ios/RNCryptor/RNCryptorEngine.h" />
+    <source-file src="src/ios/RNCryptor/RNCryptorEngine.m" />
+    <header-file src="src/ios/RNCryptor/RNDecryptor.h" />
+    <source-file src="src/ios/RNCryptor/RNDecryptor.m" />
+    <header-file src="src/ios/RNCryptor/RNEncryptor.h" />
+    <source-file src="src/ios/RNCryptor/RNEncryptor.m" />
+
+
+    <!-- <source-file src="src/ios/interapp.dat" />-->
+
+ 
+
+  </platform>
+</plugin>
