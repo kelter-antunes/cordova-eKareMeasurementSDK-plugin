@@ -39,21 +39,10 @@
 
     <framework src="Foundation.framework" />
     <framework src="Security.framework" />
-    <source-file src="src/ios/eKareinSightInterApp.m"/>
-    <header-file src="src/ios/eKareinSightInterApp.h"/>
-    <header-file src="src/ios/RNCryptor/RNCryptor+Private.h" />
-    <header-file src="src/ios/RNCryptor/RNCryptor-Prefix.pch" />
-    <header-file src="src/ios/RNCryptor/RNCryptor.h" />
-    <source-file src="src/ios/RNCryptor/RNCryptor.m" />
-    <header-file src="src/ios/RNCryptor/RNCryptorEngine.h" />
-    <source-file src="src/ios/RNCryptor/RNCryptorEngine.m" />
-    <header-file src="src/ios/RNCryptor/RNDecryptor.h" />
-    <source-file src="src/ios/RNCryptor/RNDecryptor.m" />
-    <header-file src="src/ios/RNCryptor/RNEncryptor.h" />
-    <source-file src="src/ios/RNCryptor/RNEncryptor.m" />
+
+    <source-file src="src/ios"  target-dir="src"/>
 
 
-    <!-- <source-file src="src/ios/interapp.dat" />-->
 
  
 

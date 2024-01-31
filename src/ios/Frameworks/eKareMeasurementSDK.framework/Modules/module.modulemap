@@ -1,0 +1,4 @@
+framework module eKareMeasurementSDK {
+  header "eKareMeasurementSDK-Swift.h"
+  requires objc
+}
