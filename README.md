@@ -1,2 +1,2 @@
-cordova-eKare-inSight-inter-app-communication
+cordova-ekare-measurement-sdk-plugin
 ====
