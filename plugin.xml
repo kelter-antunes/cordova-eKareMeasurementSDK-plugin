@@ -50,7 +50,9 @@
     <!-- <resource-file src="src/ios/Frameworks/eKareMeasurementSDK.framework" target="Frameworks/eKareMeasurementSDK.framework" /> -->
     <!-- <header-file src="src/ios/Frameworks/RNEncryptor.h" /> -->
 
-    <header-file src="src/ios/Frameworks/eKareMeasurementSDK.framework/RNEncryptor.h" />
+    <header-file src="src/ios/Frameworks/eKareMeasurementSDK.framework/Headers/eKareMeasurement.h" />
+    <header-file src="src/ios/Frameworks/eKareMeasurementSDK.framework/Headers/RNCryptor.h" />
+    <header-file src="src/ios/Frameworks/eKareMeasurementSDK.framework/Headers/RNEncryptor.h" />
 
     <source-file src="src/ios/eKareinSightInterApp.m"/>
     <header-file src="src/ios/eKareinSightInterApp.h"/>
