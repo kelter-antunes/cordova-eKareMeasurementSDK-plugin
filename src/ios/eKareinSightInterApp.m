@@ -6,12 +6,10 @@
 
 @implementation eKareinSightInterApp
 
-@property (nonatomic, strong) eKareMeasurement          *eKareMeasurementObj;
-
 - (void)open:(CDVInvokedUrlCommand*)command {
 	[self.commandDelegate runInBackground:^{
 
-    self.eKareMeasurementObj = [eKareMeasurement new];
+    eKareMeasurement *eKareMeasurementObj = [eKareMeasurement new];
 
     NSString *result = nil;
 
